@@ -1,19 +1,68 @@
-body {
+html {
   background-color: white;
+  height: 100vh;
   color: $dark-gray;
 }
 
-.splash {
+body {
+}
+
+section.splash {
+  background: white;
+  .container {
+    font-size: 1.3em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: url(../images/background.jpg) no-repeat center center;
+    background-size: cover;
+    .splash__text {
+      width: 85%;
+      margin: auto;
+      text-align: center;
+      h1 {
+        font-weight: 200;
+      }
+      img {
+        max-width: 8em;
+      }
+    }
+  }
+}
+
+section {
+  height: 100vh;
+  position: relative;
+  background-color: #FFBBF2;
+  background: url(../images/background.jpg) no-repeat center center;
+  background-size: cover;
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    margin: auto;
+    height: 90%;
+  }
+}
+
+section.signup .container {
+  background-color: white;
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 100vh;
+}
 
+#signup {
+}
+
+#video {
   .container {
-    text-align: center;
-
-    h1 {
-      font-weight: 200;
-    }
+    background-color: transparent;
+  }
+  video {
+    width: 100%;
   }
 }

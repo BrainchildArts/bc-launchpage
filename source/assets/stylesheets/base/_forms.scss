@@ -40,6 +40,8 @@ textarea {
   padding: $base-spacing / 3;
   transition: border-color;
   width: 100%;
+  border: 1px solid $red;
+  border-radius: 0;
 
   &:hover {
     border-color: darken($base-border-color, 10%);
@@ -49,6 +51,7 @@ textarea {
     border-color: $action-color;
     box-shadow: $form-box-shadow-focus;
     outline: none;
+    border-color: $red;
   }
 }
 
@@ -75,4 +78,56 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
+}
+
+
+
+
+
+
+
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: .25;
+}
+
+[placeholder]:focus::-moz-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: .25;
+}
+
+[placeholder]:focus:-ms-input-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: .25;
+}
+
+input.button {
+    width: auto;
+    display: inline-block;
+    background: none;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+    min-height: $base-line-height * 8;
+}
+
+label {
+    line-height: $base-line-height;
+    margin-bottom: $base-line-height / 4;
+    display: block;
+}
+
+.error {
+    color: red;
+    display: block;
+    margin-bottom: $base-line-height / 2;
+}
+
+.mc-field-group {    
+    max-width: 30em;
+    margin: auto;
 }
