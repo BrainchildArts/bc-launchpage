@@ -1,9 +1,8 @@
 var gulp = require('gulp'),
+  p = require('gulp-load-plugins')(),
   autoprefixer = require('gulp-autoprefixer'),
   bourbon = require('node-bourbon'),
   browsersync = require('browser-sync'),
-  concat = require('gulp-concat'),
-  coffee = require('gulp-coffee'),
   deploy = require('gulp-gh-pages'),
   haml = require('gulp-ruby-haml'),
   include = require('gulp-include'),
@@ -13,9 +12,9 @@ var gulp = require('gulp'),
 
 var paths = {
   haml: './source/views/*.haml',
-  coffee: './source/assets/javascripts/**/*.coffee',
+  javascript: './source/assets/javascripts/**/*.js',
   scss: './source/assets/stylesheets/**/*.scss',
-  images: './source/assets/images/*',
+  images: './source/assets/images/**/*',
   fonts: './source/assets/fonts/*'
 };
 
@@ -38,8 +37,8 @@ gulp.task('stylesheets', function() {
 });
 
 // Coffeescript
-gulp.task('javascripts', function() {
-  return gulp.src(paths.coffee)
+gulp.task('coffeecripts', function() {
+  return gulp.src(paths.javascript)
     .pipe(sourcemaps.init())
     .pipe(include())
     .pipe(coffee())
@@ -47,8 +46,19 @@ gulp.task('javascripts', function() {
     .pipe(gulp.dest('./build/assets/javascripts'));
 });
 
-coffeeStream = coffee({bare: true});
-coffeeStream.on('error', function(err) {});
+
+// JS Compile
+gulp.task('scripts', function() {
+    gulp.src(paths.javascript)
+        .pipe(p.concat('scripts.js'))
+        .pipe(gulp.dest('./build/assets/javascripts'))
+        .pipe(p.uglify())
+        .pipe(p.rename({
+            suffix: '.min'
+        }))
+        .on("error", errorAlert)
+        .pipe(gulp.dest('./build/assets/javascripts'))
+});
 
 // Copy images
 gulp.task('images', function () {
@@ -77,7 +87,7 @@ gulp.task('server', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.haml, ['views']);
   gulp.watch(paths.scss, ['stylesheets']);
-  gulp.watch(paths.coffee, ['javascripts']);
+  gulp.watch(paths.javascript, ['scripts']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.fonts, ['fonts']);
   gulp.watch('./build/*.html', browsersync.reload);
@@ -88,9 +98,14 @@ gulp.task('watch', function() {
 });
 
 // Run
-gulp.task('default', ['views', 'stylesheets', 'javascripts', 'images', 'fonts', 'server', 'watch'], function() {
+gulp.task('default', ['views', 'stylesheets', 'scripts', 'images', 'fonts', 'server', 'watch'], function() {
 
 });
+
+function errorAlert(err) {
+    console.log(err.toString());
+    this.emit("end");
+}
 
 // Deploy
 gulp.task('deploy', function () {

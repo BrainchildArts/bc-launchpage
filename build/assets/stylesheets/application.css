@@ -371,7 +371,7 @@ button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
   font-size: 1em;
   font-weight: 600;
   line-height: 1;
@@ -403,7 +403,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
   font-size: 1em; }
 
 label {
@@ -422,13 +422,15 @@ textarea {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
   -webkit-transition: border-color;
   transition: border-color;
-  width: 100%; }
+  width: 100%;
+  border: 1px solid #F7426B;
+  border-radius: 0; }
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
   select[multiple=multiple]:hover,
   textarea:hover {
@@ -438,7 +440,8 @@ textarea {
   textarea:focus {
     border-color: #477dca;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
-    outline: none; }
+    outline: none;
+    border-color: #F7426B; }
 
 textarea {
   resize: vertical; }
@@ -461,6 +464,46 @@ select {
   margin-bottom: 1.5em;
   max-width: 100%;
   width: auto; }
+
+[placeholder]:focus::-webkit-input-placeholder {
+  -webkit-transition: opacity 0.5s 0.5s ease;
+  transition: opacity 0.5s 0.5s ease;
+  opacity: .25; }
+
+[placeholder]:focus::-moz-placeholder {
+  -webkit-transition: opacity 0.5s 0.5s ease;
+  transition: opacity 0.5s 0.5s ease;
+  opacity: .25; }
+
+[placeholder]:focus:-ms-input-placeholder {
+  -webkit-transition: opacity 0.5s 0.5s ease;
+  transition: opacity 0.5s 0.5s ease;
+  opacity: .25; }
+
+input.button {
+  width: auto;
+  display: inline-block;
+  background: none; }
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+  min-height: 12; }
+
+label {
+  line-height: 1.5;
+  margin-bottom: 0.375;
+  display: block; }
+
+.error {
+  color: red;
+  display: block;
+  margin-bottom: 0.75; }
+
+.mc-field-group {
+  max-width: 30em;
+  margin: auto; }
 
 ul,
 ol {
@@ -505,7 +548,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #333;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5; }
 
@@ -515,8 +558,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1em;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+  font-size: 1.2em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
@@ -545,6 +588,16 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+<<<<<<< HEAD
+=======
+.social {
+  padding: 0;
+  list-style: none; }
+
+.hide-overflow {
+  overflow: hidden; }
+
+>>>>>>> 17f2e0f
 html {
   background-color: white;
   height: 100vh;
@@ -612,3 +665,37 @@ section.signup .container {
   background-color: transparent; }
 #video video {
   width: 100%; }
+<<<<<<< HEAD
+=======
+
+.video-wrapper {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative; }
+  .video-wrapper embed,
+  .video-wrapper object,
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%; }
+
+.social {
+  margin-bottom: 3em; }
+  .social li, .social a {
+    display: inline-block;
+    margin: 0 0.375em; }
+    .social li a, .social a a {
+      width: 2.25em;
+      height: 2.25em;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+  .social__facebook {
+    background: url(../images/social/facebook.svg); }
+  .social__twitter {
+    background: url(../images/social/twitter.svg); }
+>>>>>>> 17f2e0f

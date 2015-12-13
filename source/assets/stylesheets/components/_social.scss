@@ -1,0 +1,22 @@
+.social {
+    @extend %unstyled-list;
+    margin-bottom: $base-spacing * 2;
+    li,a {
+        display: inline-block;
+        margin: 0 $base-spacing / 4;
+        a {
+            width: $base-spacing * 1.5;
+            height: $base-spacing * 1.5;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__facebook {
+        background: url(../images/social/facebook.svg);
+    }
+    &__twitter {
+        background: url(../images/social/twitter.svg);
+    }
+}
