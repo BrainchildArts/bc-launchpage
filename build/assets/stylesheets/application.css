@@ -588,8 +588,6 @@ picture {
   margin: 0;
   max-width: 100%; }
 
-<<<<<<< HEAD
-=======
 .social {
   padding: 0;
   list-style: none; }
@@ -597,7 +595,6 @@ picture {
 .hide-overflow {
   overflow: hidden; }
 
->>>>>>> 17f2e0f
 html {
   background-color: white;
   height: 100vh;
@@ -665,8 +662,6 @@ section.signup .container {
   background-color: transparent; }
 #video video {
   width: 100%; }
-<<<<<<< HEAD
-=======
 
 .video-wrapper {
   height: 0;
@@ -698,4 +693,3 @@ section.signup .container {
     background: url(../images/social/facebook.svg); }
   .social__twitter {
     background: url(../images/social/twitter.svg); }
->>>>>>> 17f2e0f
