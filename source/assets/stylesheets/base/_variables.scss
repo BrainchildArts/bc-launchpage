@@ -1,5 +1,5 @@
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: $lucida-grande;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -12,6 +12,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
+$baseline: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
@@ -33,3 +34,26 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+$primary : #232323;
+
+$color1 : #FEEFDA;
+$color2 : #D5DBE7;
+$color3 : #2D4363;
+
+$red : #F7426B;
+$orange: #F39161;
+
+
+$white : #F1F1EF;
+$black : #272822;
+
+$phone : 27.5rem;
+
+$phablet : 40rem;
+
+$tablet : 60rem;
+
+$laptop : 80rem;
+
+$desktop : 90rem;

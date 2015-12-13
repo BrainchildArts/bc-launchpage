@@ -545,11 +545,56 @@ picture {
   margin: 0;
   max-width: 100%; }
 
-body {
+html {
   background-color: white;
+  height: 100vh;
   color: #333; }
 
-.splash {
+section.splash {
+  background: white; }
+  section.splash .container {
+    font-size: 1.3em;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: url(../images/background.jpg) no-repeat center center;
+    background-size: cover; }
+    section.splash .container .splash__text {
+      width: 85%;
+      margin: auto;
+      text-align: center; }
+      section.splash .container .splash__text h1 {
+        font-weight: 200; }
+      section.splash .container .splash__text img {
+        max-width: 8em; }
+
+section {
+  height: 100vh;
+  position: relative;
+  background-color: #FFBBF2;
+  background: url(../images/background.jpg) no-repeat center center;
+  background-size: cover; }
+  section .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 90%;
+    margin: auto;
+    height: 90%; }
+
+section.signup .container {
+  background-color: white;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -561,9 +606,9 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh; }
-  .splash .container {
-    text-align: center; }
-    .splash .container h1 {
-      font-weight: 200; }
+          justify-content: center; }
+
+#video .container {
+  background-color: transparent; }
+#video video {
+  width: 100%; }
