@@ -1,22 +1,21 @@
 .social {
-    @extend %unstyled-list;
-    margin-bottom: $base-spacing * 2;
-    li,a {
-        display: inline-block;
-        margin: 0 $base-spacing / 4;
-        a {
-            width: $base-spacing * 1.5;
-            height: $base-spacing * 1.5;
-            display: block;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+  @extend %unstyled-list;
+  svg:hover { 
+    fill: darkslateblue; 
+  }
+  li {
+    display: inline-block;
+    width: 2em;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
-    &__facebook {
-        background: url(../images/social/facebook.svg);
+  }
+  .email-modal a {
+    color: desaturate(magenta,10%);
+    &:hover {
+      color: desaturate(magenta, 20%)
     }
-    &__twitter {
-        background: url(../images/social/twitter.svg);
-    }
+  }
 }
