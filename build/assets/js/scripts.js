@@ -1,8 +1,38 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('./assets/images/bcfinal.mp4',{ambient:true});
+    BV.show('./assets/images/bcfinal.mp4',{ambient: true});
+  
+
+  $("#sound").click( function (){
+    if( $(this).hasClass('muted') )
+    {
+      BV.getPlayer().volume(1);
+      $(this).removeClass('muted');
+      $(".splash").addClass('vhs-flicker vhs-reverse');
+      setTimeout(hide, 400);
+    }
+    else {
+      BV.getPlayer().volume(0);
+      $(this).addClass('muted');
+      $(".splash").removeClass('hidden');
+      $(".splash").addClass('vhs-flicker');
+      setTimeout(clean, 400);
+    }
+  });
+
 });
+
+function hide(){
+  $(".splash").addClass('hidden')
+  $(".splash").removeClass('vhs-flicker vhs-reverse');
+}
+
+function clean(){
+  $(".splash").removeClass('vhs-flicker');
+}
+
+
 
 // var BV = new $.BigVideo();
 // BV.init();

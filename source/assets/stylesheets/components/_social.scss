@@ -5,7 +5,10 @@
   }
   li {
     display: inline-block;
-    width: 2em;
+    margin-right: 1em;
+    &.social__icon {
+      width: 2em;
+    }
     img {
       display: block;
       width: 100%;
