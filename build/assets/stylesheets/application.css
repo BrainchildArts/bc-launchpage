@@ -602,6 +602,7 @@ html {
 
 body {
   background: url("../images/background.jpg");
+  background: transparent;
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -652,7 +653,7 @@ section.splash {
     bottom: 0;
     left: 0; }
 
-section.splash.hidden {
+.splash-content.hidden {
   visibility: hidden; }
 
 section {

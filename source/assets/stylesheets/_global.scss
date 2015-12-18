@@ -6,6 +6,7 @@ html {
 
 body {
   background: url('../images/background.jpg');
+  background: transparent;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -67,7 +68,7 @@ section.splash {
   }
 }
 
-section.splash.hidden {
+.splash-content.hidden {
   visibility: hidden;
 }
 

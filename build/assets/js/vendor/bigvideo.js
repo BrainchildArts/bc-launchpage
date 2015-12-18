@@ -350,7 +350,7 @@
 				var ext = ( source.lastIndexOf('?') > 0 ) ? source.substring(source.lastIndexOf('.')+1, source.lastIndexOf('?')) : source.substring( source.lastIndexOf('.')+1);
 				if (ext == 'jpg' || ext == 'gif' || ext == 'png') {
 					showPoster(source);
-				} else if (ext == 'mp4' || ext == 'ogg' || ext == 'ogv'|| ext == 'webm') {
+				} else {
 					playVideo(source);
 					if (options.onShown) options.onShown();
 					isQueued = false;

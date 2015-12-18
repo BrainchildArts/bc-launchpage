@@ -9,14 +9,14 @@ $(function() {
     {
       BV.getPlayer().volume(1);
       $(this).removeClass('muted');
-      $(".splash").addClass('vhs-flicker vhs-reverse');
+      $(".splash-content").addClass('vhs-flicker vhs-reverse');
       setTimeout(hide, 400);
     }
     else {
       BV.getPlayer().volume(0);
       $(this).addClass('muted');
-      $(".splash").removeClass('hidden');
-      $(".splash").addClass('vhs-flicker');
+      $(".splash-content").removeClass('hidden');
+      $(".splash-content").addClass('vhs-flicker');
       setTimeout(clean, 400);
     }
   });
@@ -24,12 +24,12 @@ $(function() {
 });
 
 function hide(){
-  $(".splash").addClass('hidden')
-  $(".splash").removeClass('vhs-flicker vhs-reverse');
+  $(".splash-content").addClass('hidden')
+  $(".splash-content").removeClass('vhs-flicker vhs-reverse');
 }
 
 function clean(){
-  $(".splash").removeClass('vhs-flicker');
+  $(".splash-content").removeClass('vhs-flicker');
 }
 
 
