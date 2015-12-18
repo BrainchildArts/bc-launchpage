@@ -1,7 +1,7 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('./assets/images/bcfinal.mp4',{ambient: true});
+    BV.show('https://docs.google.com/uc?authuser=0&id=0B2oLskYH6EgjMmxUZjhGWkdrY2M&export=download',{ambient: true});
   
 
   $("#sound").click( function (){

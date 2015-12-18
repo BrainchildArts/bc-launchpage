@@ -600,6 +600,11 @@ html {
   height: 100vh;
   color: #333; }
 
+body {
+  background: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 #sound {
   position: fixed;
   height: 30px;
@@ -651,10 +656,7 @@ section.splash.hidden {
   visibility: hidden; }
 
 section {
-  position: relative;
-  background-color: #FFBBF2;
-  background: url(../images/background.jpg) no-repeat center center;
-  background-size: cover; }
+  position: relative; }
   section .container {
     position: absolute;
     top: 0;

@@ -5,6 +5,9 @@ html {
 }
 
 body {
+  background: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #sound { 
@@ -70,9 +73,6 @@ section.splash.hidden {
 
 section {
   position: relative;
-  background-color: #FFBBF2;
-  background: url(../images/background.jpg) no-repeat center center;
-  background-size: cover;
   .container {
     position: absolute;
     top: 0;
@@ -88,4 +88,8 @@ section.signup .container {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.vjs-error-display {
+  // display: none !important;
 }
