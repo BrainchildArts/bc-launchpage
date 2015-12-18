@@ -6,7 +6,6 @@ html {
 
 body {
   background: url('../images/background.jpg');
-  background: transparent;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -17,9 +16,10 @@ body {
   width: 30px;
   top: 4vw;
   right: 4vw;
-  background-image: url('../images/muteicon.png');
+  background-image: url('../images/note.svg');
   background-position: top left;
   background-repeat: no-repeat;
+  background-size: contain;
   z-index: 10;
 }
 
@@ -33,26 +33,31 @@ section.splash {
   background: transparent;
   // background-image: url('../images/overlay-orig.png');
   // background-repeat: repeat;
-  border: 3.5vw solid white;
+  border: 1.7em solid white;
   .container {
     background: transparent;
+    padding: 2em;
     .splash__text {
       text-transform: uppercase;
       color: white;
-      padding-left: 2em;
-      padding-top: 2em;
       transition: visibility .2s ease-in-out;
+      &>:not(.logo) {
+        margin-left: 14px;
+      }
       h2 {
         font-size: 3em;
+        margin-bottom: 0;
+      }
+      h2.location {
+        font-size: 1.7em;
       }
       img.logo {
-        max-width: 20%;
+        max-width: 12em;
       }
     }
     ul.social {
       position: absolute;
-      bottom: 1em;
-      left: 1em;
+      bottom: 1.5em;
     }
     .modal {
       color: black;
@@ -84,13 +89,6 @@ section {
   }
 }
 
-section.signup .container {
-  background-color: white;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
 .vjs-error-display {
-  // display: none !important;
+  display: none !important;
 }

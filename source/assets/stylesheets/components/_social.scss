@@ -15,10 +15,15 @@
       height: auto;
     }
   }
-  .email-modal a {
-    color: desaturate(magenta,10%);
-    &:hover {
-      color: desaturate(magenta, 20%)
+  .email {
+    display: block;
+    margin-bottom: .5em;
+    a {
+      color: #D5E0FF;
+      font-size: 1.4em;
+      &:hover {
+        color: darken(#D5E0FF, 20%)
+      }
     }
   }
 }

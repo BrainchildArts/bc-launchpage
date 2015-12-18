@@ -21,19 +21,11 @@
           .splash__text.splash-content
             %img.logo.splash-content{src: "./assets/images/bclogo.png"}
             %h3.splash-content Festival 2016
-            %h2.splash-content 8-10 July
-            %h2.splash-content East Sussex
+            %h2.dates.splash-content 8-10 July
+            %h2.location.splash-content East Sussex
             -# %p <a href="#signup">keep in touch</a>
             %ul.social.splash-content
-              %li.social__icon
-                %a.social__facebook{target:"_blank",href:"https://www.facebook.com/BrainchildArts"}
-                  %img{src: "./assets/images/social/facebook.svg"}
-
-              %li.social__icon
-                %a.social__twitter{target:"_blank",title:'@brainchildfest',href:"https://twitter.com/BrainchildFest"}
-                  %img{src: "./assets/images/social/twitter.svg"}
-
-              %li
+              %li.email
                 .modal.email-modal
                   %label{:for => "modal-1"}
                     %a.modal-trigger{target:"_blank"} Keep in Touch
@@ -68,6 +60,14 @@
                           </form>
                         </div>
                         <!--End mc_embed_signup-->
+              %li.social__icon
+                %a.social__facebook{target:"_blank",href:"https://www.facebook.com/BrainchildArts"}
+                  %img{src: "./assets/images/social/facebook.svg"}
+
+              %li.social__icon
+                %a.social__twitter{target:"_blank",title:'@brainchildfest',href:"https://twitter.com/BrainchildFest"}
+                  %img{src: "./assets/images/social/twitter.svg"}
+
 
     -# ---- BigVideo Dependencies ----
     %script{src: "./assets/js/vendor/jquery.min.js", type: "text/javascript"}
