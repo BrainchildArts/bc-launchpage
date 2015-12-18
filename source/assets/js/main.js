@@ -1,7 +1,7 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('https://docs.google.com/uc?authuser=0&id=0B2oLskYH6EgjMmxUZjhGWkdrY2M&export=download',{ambient: true});
+    BV.show('http://brainchildfestival.co.uk/hosting/bcfinal.mp4',{ambient: true});
   
 
   $("#sound").click( function (){

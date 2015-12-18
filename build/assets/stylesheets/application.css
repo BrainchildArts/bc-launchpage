@@ -611,11 +611,24 @@ body {
   width: 30px;
   top: 4vw;
   right: 4vw;
-  background-image: url("../images/note.svg");
-  background-position: top left;
-  background-repeat: no-repeat;
-  background-size: contain;
   z-index: 10; }
+  #sound img {
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  #sound .black {
+    opacity: 1; }
+
+#sound.muted .white {
+  opacity: 1; }
+#sound.muted .black {
+  opacity: 0; }
 
 section.splash {
   width: 100%;
