@@ -20,8 +20,8 @@ $(function() {
       setTimeout(clean, 400);
     }
   });
-
 });
+
 
 function hide(){
   $(".splash-content").addClass('hidden')
