@@ -105,7 +105,6 @@ select {
 input.button {
     width: auto;
     display: inline-block;
-    background: none;
 }
 
 textarea {
@@ -127,7 +126,7 @@ label {
     margin-bottom: $base-line-height / 2;
 }
 
-.mc-field-group {    
+#mc-embed-signup {    
     max-width: 30em;
     margin: auto;
 }

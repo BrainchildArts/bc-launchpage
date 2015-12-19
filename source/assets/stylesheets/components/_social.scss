@@ -8,6 +8,10 @@
     margin-right: 1em;
     &.social__icon {
       width: 2em;
+      transition: .12s ease;
+    }
+    &.social__icon:hover {
+      transform: scale(1.07);
     }
     img {
       display: block;
@@ -17,12 +21,12 @@
   }
   .email {
     display: block;
-    margin-bottom: .5em;
+    margin-top: .5em;
     a {
-      color: #D5E0FF;
+      color: lighten($action-color,10%);
       font-size: 1.4em;
       &:hover {
-        color: darken(#D5E0FF, 20%)
+        color: lighten($action-color,5%);
       }
     }
   }

@@ -14,22 +14,32 @@ body {
   position: fixed;
   height: 30px;
   width: 30px;
-  top: 4vw;
-  right: 4vw;
+  top: 2.3em;
+  right: 2.5em;
   z-index: 10;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  transition: transform .2s ease;
+  &.disabled {
+    cursor: default;
+    display:none;
+  }
   img {
-    width: 100%;
     opacity: 0;
-    transition: all .2s ease-in-out;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    transition: transform .07s ease;
   }
   .black {
-    opacity: 1;
+    opacity: .5;
   }
+}
+
+#sound:hover img {
+  transform: scale(1.07);
 }
 
 #sound.muted {
@@ -52,26 +62,27 @@ section.splash {
   // background-image: url('../images/overlay-orig.png');
   // background-repeat: repeat;
   border: 1.7em solid white;
-  .container {
+  .splash__text {
     background: transparent;
-    padding: 2em;
-    .splash__text {
-      text-transform: uppercase;
-      color: white;
-      transition: visibility .2s ease-in-out;
-      &>:not(.logo) {
-        margin-left: 14px;
-      }
-      h2 {
-        font-size: 3em;
-        margin-bottom: 0;
-      }
-      h2.location {
-        font-size: 1.7em;
-      }
-      img.logo {
-        max-width: 12em;
-      }
+    text-transform: uppercase;
+    color: white;
+    transition: visibility .2s ease-in-out;
+    padding: .5em;
+    @include media($phone) {
+      padding: 2em;
+    }
+    &>:not(.logo) {
+      margin-left: 14px;
+    }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 0;
+    }
+    h2.location {
+      font-size: 1.7em;
+    }
+    img.logo {
+      max-width: 12em;
     }
     ul.social {
       position: absolute;
@@ -93,18 +104,6 @@ section.splash {
 
 .splash-content.hidden {
   visibility: hidden;
-}
-
-section {
-  position: relative;
-  .container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
 }
 
 .vjs-error-display {

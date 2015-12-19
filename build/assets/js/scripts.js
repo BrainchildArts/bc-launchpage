@@ -1,7 +1,7 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('http://brainchildfestival.co.uk/hosting/bcfinal.mp4',{ambient: true});
+    BV.show('../assets/images/bcfinal.mp4',{ambient: true});
   
 
   $("#sound").click( function (){
@@ -46,8 +46,10 @@ $(function() {
   $("#modal-1").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
+      $("#sound").addClass("disabled");
     } else {
       $("body").removeClass("modal-open");
+      $("#sound").removeClass("disabled");
     }
   });
 
