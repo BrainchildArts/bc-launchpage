@@ -1,7 +1,7 @@
 $(function() {
     var BV = new $.BigVideo();
     BV.init();
-    BV.show('https://github.com/BrainchildArts/bc-launchpage/raw/gh-pages/build/assets/images/bcfinal.mp4',{ambient: true});
+    BV.show('./assets/images/bcfinal.mp4',{ambient: true});
   
 
   $("#sound").click( function (){
