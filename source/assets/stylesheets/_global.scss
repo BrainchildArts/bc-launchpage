@@ -2,6 +2,7 @@ html {
   background-color: white;
   height: 100vh;
   color: $dark-gray;
+  background-color: transparent;
 }
 
 body {
@@ -20,6 +21,10 @@ body {
   cursor: pointer;
   transition: all .4s ease-in-out;
   transition: transform .2s ease;
+  display: none;
+  @include media($maybemobile) {
+    display: block;
+  }
   &.disabled {
     cursor: default;
     display:none;

@@ -1,7 +1,9 @@
 $(function() {
     var BV = new $.BigVideo();
-    BV.init();
-    BV.show('https://github.com/BrainchildArts/bc-launchpage/raw/gh-pages/build/assets/images/bcfinal.mp4',{ambient: true});
+    if ($(window).width() > 800) {
+      BV.init();
+      BV.show('https://github.com/BrainchildArts/bc-launchpage/raw/gh-pages/build/assets/images/bcfinal.mp4',{ambient: true});
+    }
   
 
   $("#sound").click( function (){
@@ -34,13 +36,6 @@ function clean(){
 
 
 
-// var BV = new $.BigVideo();
-// BV.init();
-// if ($(window).width() < 480) {
-//     BV.show('video-poster.jpg');
-// } else {
-//     BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
-// }
 
 $(function() {
   $("#modal-1").on("change", function() {

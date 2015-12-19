@@ -353,6 +353,8 @@ td,
 th {
   padding: 0; }
 
+@-ms-viewport {
+  width: device-width; }
 html {
   box-sizing: border-box; }
 
@@ -600,7 +602,8 @@ picture {
 html {
   background-color: white;
   height: 100vh;
-  color: #333; }
+  color: #333;
+  background-color: transparent; }
 
 body {
   background: url("../images/background.jpg");
@@ -620,7 +623,11 @@ body {
   -webkit-transition: -webkit-transform .2s ease;
   transition: -webkit-transform .2s ease;
   transition: transform .2s ease;
-  transition: transform .2s ease, -webkit-transform .2s ease; }
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  display: none; }
+  @media screen and (min-width: 800px) {
+    #sound {
+      display: block; } }
   #sound.disabled {
     cursor: default;
     display: none; }
